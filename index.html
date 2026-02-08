@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Mohan Sirvi — Software Engineer</title>
+    <link rel="stylesheet" href="styles.css" />
+    <meta name="description" content="Software Engineer with 4.5+ years of experience in .NET Core, Azure, and Microservices" />
+  </head>
+  <body>
+    <main class="site">
+      <header class="hero">
+        <div class="hero-inner container">
+          <div class="profile">
+            <img id="profileImage" src="images/profile.svg" alt="Profile" />
+          </div>
+          <div class="intro">
+            <h1 id="name">Mohan Sirvi</h1>
+            <p id="title">Software Engineer II · Full-Stack Developer</p>
+            <p id="bio">Passionate software engineer with 4.5+ years of professional experience building scalable, high-performance applications using modern technologies.</p>
+            <div class="actions">
+              <a id="githubLink" class="btn ghost" target="_blank" rel="noopener">GitHub</a>
+              <a id="linkedinLink" class="btn ghost" target="_blank" rel="noopener">LinkedIn</a>
+              <a id="resumeLink" class="btn" download="resume.pdf">Download Resume</a>
+              <a class="btn" href="#contact">Contact</a>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <section class="skills container" id="skills">
+        <h2>Technical Skills</h2>
+        <div id="skillsContainer" class="skills-grid"></div>
+      </section>
+
+      <section class="experience container" id="experience">
+        <h2>Professional Experience</h2>
+        <div id="experienceContainer" class="experience-list"></div>
+      </section>
+
+      <section class="projects container" id="projects">
+        <h2>Featured Projects</h2>
+        <div id="projectsGrid" class="grid"></div>
+      </section>
+
+      <section class="contact container" id="contact">
+        <h2>Get In Touch</h2>
+        <div class="contact-grid">
+          <div class="contact-card">
+            <h3>Email</h3>
+            <p><a id="emailLink" href="mailto:you@example.com">you@example.com</a></p>
+          </div>
+          <div class="contact-card">
+            <h3>Phone</h3>
+            <p id="phone">+1 (555) 555-5555</p>
+          </div>
+          <div class="contact-card form">
+            <h3>Quick Message</h3>
+            <form id="contactForm">
+              <input id="cfName" placeholder="Your name" />
+              <input id="cfEmail" placeholder="Your email" />
+              <textarea id="cfMessage" rows="4" placeholder="Message"></textarea>
+              <button type="submit" class="btn">Send</button>
+            </form>
+          </div>
+        </div>
+      </section>
+
+      <footer class="site-footer">
+        <div class="container">
+          <p>© <span id="year"></span> Mohan Sirvi — Crafting excellence in code.</p>
+        </div>
+      </footer>
+    </main>
+    <script src="script.js" defer></script>
+  </body>
+</html>
