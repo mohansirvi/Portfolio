@@ -39,7 +39,7 @@ const PROFILE = {
   email: 'your.email@example.com',
   phone: '+1 (555) 555-5555',
   resume: 'resume.pdf',
-  photo: 'mohan.jpg'  // path to your profile image
+  photo: 'image.jpg'  // path to your profile image
 }
 ```
 
