@@ -14,17 +14,31 @@ const PROFILE = {
 const PROJECTS = [
   {
     title: 'Orange Micro Services',
-    desc: 'The project is a comprehensive e-commerce solution built using .NET 8 and Blazor, consisting of multiple microservices, a web application, and an API gateway. This project is designed to be modular, with separate services for authentication, product management, coupon management, shopping cart management, email notifications, reward management, and order processing. A Blazor-based web frontend is provided for user interaction. Azure Service Bus ensures reliable messaging between microservices, promoting smooth communication and scalability. Stripe is integrated for secure and efficient payment processing. The Ocelot API Gateway manages routing, load balancing, and security for the microservices, while Azure App Service provides a scalable and managed environment for hosting the application. Below is a detailed summary of the key components.',
+    highlights: [
+      'Comprehensive e-commerce solution built with .NET 8 and Blazor',
+      'Modular microservices architecture with separate services for authentication, product management, coupon management, shopping cart, email notifications, rewards, and order processing',
+      'Blazor-based web frontend for user interaction with Ocelot API Gateway managing routing, load balancing, and security',
+      'Azure Service Bus for reliable messaging between microservices and Azure App Service for scalable hosting',
+      'Stripe integration for secure and efficient payment processing'
+    ],
     link: 'https://github.com/mohansirvi/OrangeMicroServices'
   },
   {
     title: 'Document Management',
-    desc: 'The DocumentManagement project is a robust and scalable document management system built using C# 12.0 and .NET 8. It offers a secure and modular RESTful API for managing documents, user authentication, and ingestion workflows. Designed for enterprise-level use cases, the system emphasizes clean architecture, security, and extensibility.',
+    highlights: [
+      'Robust and scalable document management system built with C# 12.0 and .NET 8',
+      'Secure and modular RESTful API for document, user authentication, and ingestion workflow management',
+      'Designed for enterprise-level use cases with emphasis on clean architecture, security, and extensibility'
+    ],
     link: 'https://github.com/mohansirvi/DocumentManagement'
   },
   {
     title: 'Ask The AI',
-    desc: 'Ask the AI is a web application that harnesses the power of artificial intelligence to engage in conversations, answer questions, and provide insights based on user queries. Leveraging the cutting-edge GPT-3.5 model from OpenAI, this application enables users to interact with an AI assistant in a natural and intuitive way.',
+    highlights: [
+      'Web application powered by OpenAI\'s GPT-3.5 model for AI-driven conversations',
+      'Natural and intuitive interface enabling users to ask questions and receive AI-generated insights',
+      'Harnesses artificial intelligence capabilities for engaging and informative interactions'
+    ],
     link: 'https://github.com/mohansirvi/ask-the-ai'
   }
 ]
@@ -80,7 +94,7 @@ const SKILLS = {
   backend: ['C#', '.NET Core', 'ASP.NET Core', 'Entity Framework Core', 'Web API', 'Microservices', '.NET Framework'],
   cloud: ['Microsoft Azure', 'Azure Functions', 'Azure Service Bus', 'Azure DevOps'],
   database: ['SQL Server', 'SQL', 'NoSQL', 'Stored Procedures'],
-  frontend: ['HTML5', 'CSS3', 'JavaScript', 'Sencha Ext.js'],
+  frontend: ['HTML5', 'CSS3', 'JavaScript', 'Vue.js', 'Sencha Ext.js'],
   tools: ['Git/Github', 'CI/CD', 'Agile Development'],
   concepts: ['Distributed Systems', 'Scalable Systems', 'OOPS', 'Data Structures & Algorithms', 'RESTful APIs']
 }
@@ -103,7 +117,8 @@ function populateProfile(){
   PROJECTS.forEach(p => {
     const el = document.createElement('article')
     el.className = 'project'
-    el.innerHTML = `<h3>${p.title}</h3><p>${p.desc}</p><div class="links"><a class="btn ghost" target="_blank" rel="noopener" href="${p.link}">View</a></div>`
+    const highlightsHtml = p.highlights.map(h => `<li>${h}</li>`).join('')
+    el.innerHTML = `<h3>${p.title}</h3><ul class="project-highlights">${highlightsHtml}</ul><div class="links"><a class="btn ghost" target="_blank" rel="noopener" href="${p.link}">View</a></div>`
     grid.appendChild(el)
   })
 
